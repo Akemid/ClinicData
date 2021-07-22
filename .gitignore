@@ -1,0 +1,5 @@
+#secret key
+secret.json
+#migrations
+applications/data_logger/migrations/*
+applications/users/migrations/*
