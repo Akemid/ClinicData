@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from json import getSecret
+from .json import getSecret
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -34,7 +34,10 @@ DJANGO_APPS=['django.contrib.admin',
 
 THIRD_PART_APPS=[]
 
-LOCAL_APPS=[]
+LOCAL_APPS=[
+    'applications.data_logger',
+    'applications.users',
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PART_APPS + LOCAL_APPS
 

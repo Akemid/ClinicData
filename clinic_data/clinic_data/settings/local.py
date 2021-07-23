@@ -1,4 +1,5 @@
-from base import *
+from .base import *
+from .json import getSecret
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -12,7 +13,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': getSecret("DB_NAME"),
         'USER':getSecret("DB_USER"),
-        "PASSOWRD":getSecret("DB_PASS"),
+        "PASSWORD":getSecret("DB_PASS"),
         "HOST":"localhost",
         "PORT":"5432",
     }
